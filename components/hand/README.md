@@ -1,0 +1,1 @@
+Procedural anatomical-style hand fallback. Replace HandModel with a GLTF loader when a licensed clinical-quality model is supplied.

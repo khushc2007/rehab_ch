@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0a0a0a;color:#f0f0f0;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+button,input{font:inherit}
+.page{height:100vh;width:100vw;display:grid;grid-template-columns:70% 30%;background:#0a0a0a}
+.left{position:relative;height:100vh;min-width:0}
+.scene{position:absolute;inset:0}
+.connection{position:absolute;z-index:10;top:22px;left:24px;font:10px/1 "JetBrains Mono",monospace;letter-spacing:.16em;display:flex;align-items:center;gap:7px}
+.status-dot{width:6px;height:6px;border-radius:50%;display:inline-block}
+.metrics{height:100vh;background:#111;border-left:1px solid #1f1f1f;padding:24px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.topbar{display:flex;justify-content:space-between;color:#555;font:10px "JetBrains Mono",monospace;letter-spacing:.3em;margin-bottom:2px}
+.topbar span:last-child{letter-spacing:0;color:#888;font-size:12px}
+.card{background:#161616;border-radius:12px;padding:16px}
+.rep-card{padding:20px}
+.eyebrow{font:9px "JetBrains Mono",monospace;color:#555;letter-spacing:.2em;margin-bottom:9px}
+.rep-number{font:52px/1 "JetBrains Mono",monospace;color:#f0f0f0}
+.rep-target{font:20px "JetBrains Mono",monospace;color:#333}
+.exercise{font:italic 11px Inter,sans-serif;color:#666;margin-top:4px}
+.progress{height:3px;background:#1f1f1f;border-radius:999px;overflow:hidden;margin-top:14px}
+.progress>div{height:100%;background:#0F6E5E}
+.quality{display:flex;gap:10px;margin-top:8px;font:9px "JetBrains Mono",monospace}
+.good{color:#2ea853}.warn{color:#f5a623}.bad{color:#d9534f}
+.finger-list{display:flex;flex-direction:column}
+.finger-row{height:28px;display:flex;align-items:center;gap:7px}
+.finger-status{width:6px;height:6px;border-radius:50%;flex:none}
+.finger-name{width:48px;color:#555;font:9px "JetBrains Mono",monospace}
+.mini-bar{height:2px;background:#1a1a1a;flex:1;overflow:hidden}
+.mini-bar>div{height:100%;background:linear-gradient(90deg,#0a4f44,#0F6E5E)}
+.angle{width:36px;text-align:right;color:#0F6E5E;font:11px "JetBrains Mono",monospace}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.metric{padding:5px 0}
+.metric>div{font:9px "JetBrains Mono",monospace;letter-spacing:.15em;color:#444}
+.metric strong{display:block;margin-top:5px;font:18px "JetBrains Mono",monospace;color:#f0f0f0}
+.good-cell strong{color:#2ea853}
+.emg-card{height:80px;padding:12px 16px}
+.spark{display:block;width:100%;height:42px}
+.end{margin-top:auto;height:42px;background:transparent;border:1px solid #2a2a2a;color:#555;letter-spacing:.2em;font-size:12px;border-radius:7px;transition:.2s}
+.end:hover{border-color:#0F6E5E;color:#0F6E5E}
+.sim-key{position:fixed;left:8px;bottom:8px;z-index:40;width:18px;height:18px;border:0;background:transparent;color:#222;font-size:15px;cursor:pointer}
+.sim-key:hover{color:#333}
+.sim-panel{position:fixed;z-index:35;left:0;right:0;bottom:0;height:0;overflow:hidden;background:#0d0d0d;border-top:1px solid #1f1f1f;padding:0 24px;transition:height .3s ease,padding .3s ease}
+.sim-panel.open{height:240px;padding:16px 24px}
+.sim-head{display:flex;align-items:center;gap:8px;font:9px "JetBrains Mono",monospace;color:#333;margin-bottom:10px}
+.sim-mode{color:#0F6E5E}
+.toggle{width:28px;height:14px;border:1px solid #333;background:#171717;border-radius:999px;padding:1px}.toggle span{display:block;width:10px;height:10px;border-radius:50%;background:#555;transition:.2s}.toggle.active{border-color:#0F6E5E}.toggle.active span{background:#0F6E5E;transform:translateX(13px)}
+.slider-grid{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));grid-auto-flow:column;grid-template-rows:repeat(6,22px);column-gap:36px}
+.slider{display:grid;grid-template-columns:50px 1fr 30px;align-items:center;gap:8px;font:8px "JetBrains Mono",monospace;color:#444}
+.slider b{font-weight:400;color:#0F6E5E;text-align:right}
+.slider input{width:100%;accent-color:#0F6E5E}
+.preset-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:8px;font:8px "JetBrains Mono",monospace;color:#333}
+.preset-row button{height:24px;padding:0 8px;background:#161616;border:1px solid #2a2a2a;color:#555;font:9px "JetBrains Mono",monospace}
+.preset-row button:hover{border-color:#0F6E5E;color:#0F6E5E}
+.preset-row label{margin-left:8px;color:#444}
+.preset-row input{accent-color:#0F6E5E}
+@media(max-width:900px){.page{grid-template-columns:1fr}.metrics{display:none}.left{width:100vw}}
